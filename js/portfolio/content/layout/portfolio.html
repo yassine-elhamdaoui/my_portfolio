@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/js/portfolio/content/styles/header.css">
+    <link rel="stylesheet" href="/js/portfolio/content/styles/home.css">
+    <link rel="stylesheet" href="/js/portfolio/content/styles/about.css">
+    <link rel="stylesheet" href="/js/portfolio/content/styles/services.css">
+    <link rel="stylesheet" href="/js/portfolio/content/styles/projects.css">
+    <link rel="stylesheet" href="/js/portfolio/content/styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Playfair Display;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+        :root{
+            --bg--color: #1f242d;
+            --second--bg--color: #323946;
+            --text--color :#fff;
+            --main--color:#c30606;
+        }
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+        body{
+            background-color: var(--bg--color);
+            color: var(--text--color);
+            overflow-x: hidden;
+        }
+        section{
+            min-height: 100svh;
+            padding: 10rem 9% 2rem;
+        }
+
+
+        @media screen and (max-width: 1062px){
+            html{
+                font-size: 55%;
+            }
+        }
+        @media screen and (max-width:947px){
+            header{
+                padding: 2rem 3% 2rem 3%;
+            }
+            section{
+                padding: 10rem 3% 2rem;
+            }
+        }
+
+        @media screen and (max-width:840px){
+            .icon{
+                display: block;
+            }
+            nav{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 3%;
+                background-color: #323946;
+                border-top: .1rem solid rgba(10, 10, 10, 0.287);
+                border-bottom: .1rem solid rgba(10, 10, 10, 0.287);
+                box-shadow: 0 .5rem 1rm rgba(0, 0, 0, 0.349);
+                display: none;
+            }
+            nav.active{
+                display: block;
+            }
+            nav a{
+                display: block;
+                width: 100%;
+                padding: 2rem ;
+                padding-left: 0;
+            }
+            .projects-container{
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+        @media screen and (max-width:460px) {
+            .projects-container{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 350px){
+            html{
+                font-size: 50%;
+                overflow-x: hidden;
+
+            }
+            .input-box input{
+                width: 100%;
+            }
+            .about-img , .home-img{
+                width: 90vw;
+                text-align: center;
+            }
+            .about-img img , .home-img img{
+                width: 99vw;
+            }
+        }
+
+        @media screen and (max-width:800px){
+            .home{
+                flex-direction: column;
+            }
+            .home-content h3{
+                font-size: 2.6rem;
+            }
+            .home-content h1{
+                font-size: 5rem;
+            }
+            .home-img img{
+                width: 70vw;
+                margin-top: 4rem;
+            }
+            .about-img img{
+                width: 70vw;
+                margin-top: 4rem;
+            }
+            .about{
+                flex-direction: column-reverse;
+            }
+            
+        }
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/e1688b77c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfo<span style="color: #c30606;">lio</span></a>
+        <div class="icon">
+            <i class="fa-solid fa-bars" id="menu_icon"></i>
+            <!-- <i class="fa-solid fa-x" id="menu_icon" style="display: none;"></i> -->
+        </div>
+        <nav id="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Yassine El Hamdaoui</h1>
+            <h3>I'm a <span class="animated">Computer Science Student</span></h3>
+            <p>And i can build you a wonderfull peace of software ! .scroll down to know more about me </p>
+            <div class="social-media">
+                <a target="_blank" href="https://web.facebook.com/profile.php?id=100012877591284"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a target="_blank" href="https://www.instagram.com/_yass1_ne_/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://github.com/yassine-elhamdaoui"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="/js/portfolio/content/images/my-pic.jpg" alt="">
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/js/portfolio/content/images/my-pic.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2>About <span>Me</span></h2>
+            <h3>Full Stack <span style="color: #c30606;">Developer</span></h3>
+            <p>
+                Im a computer science student, I possess a passion for technology 
+                and a talent for programming. My analytical mindset and programming skills have helped me stand out in my field
+                , and I constantly strive to improve and push the boundaries of what is possible. My personal website serves as a platform to showcase my skills, 
+                share my projects and thoughts on technology, and connect with others in the industry.
+            </p>
+            <a href="#about" class="btn-read">Read More</a>
+        </div>
+        <div class="popup-container">
+            <div class="popup-content">
+                <a href="#bout" class="close"><i class="fa-solid fa-x"></i></a>
+                <div>
+                    <p>
+                        As a computer science student, I have acquired a diverse range of skills in various programming languages such as Java, C++, Python, and web development technologies including HTML, CSS, and JavaScript. With these skills, I am proficient in developing robust and scalable desktop applications. I am familiar with object-oriented programming principles and design patterns, which enable me to write efficient and maintainable code.
+    
+                        Furthermore, I have extensive experience in web development, which includes designing and developing websites using front-end technologies such as React and Angular. I am adept in creating responsive and interactive user interfaces that enhance the user experience. Additionally, I have worked with back-end technologies such as Node.js and Django to build RESTful APIs and web services. I have also integrated databases such as MySQL, PostgreSQL, and MongoDB with web applications, allowing for efficient data storage and retrieval.
+    
+                        Aside from my technical skills, I have also developed strong problem-solving and analytical skills. I enjoy working on complex programming problems and have developed the ability to break down problems into smaller, more manageable parts. I am also able to think critically and come up with innovative solutions to problems. Finally, I am a strong team player, having worked on numerous group projects throughout my academic career. I am confident in my ability to communicate effectively and collaborate with others to deliver successful projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="icons">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laborum possimus ipsa eius error quas incidunt dolor perferendis magnam neque?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <div class="icons">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laborum possimus ipsa eius error quas incidunt dolor perferendis magnam neque?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <div class="icons">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laborum possimus ipsa eius error quas incidunt dolor perferendis magnam neque?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Latest <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/back_groung_2.jpeg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/books.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/library-book-bookshelf-read.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/page1_bg.jpeg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/pexels-photo-1229861.jpeg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="/js/portfolio/content/images/page2_bg.jpeg" alt="">
+                <div class="projects-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full name">
+                <input type="email" required placeholder="Email address">
+            </div>
+            <div class="input-box">
+                <input type="Number" required placeholder="Mobile Number">
+                <input type="text" placeholder="Email subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" required placeholder="Your Message" ></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer>
+        <div class="copyright">
+            <div class="footer-text">
+                <p>Copyright &copy; 2023 | by Yassine-el-hamdaoui</p>
+            </div>
+            <a href="#home"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
+    </footer>
+    <!-- the js imports -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/portfolio/content/dynamics/portfolio.js"></script>
+</body>
+</html>
